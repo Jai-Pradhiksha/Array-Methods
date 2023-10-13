@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Methods Examples</title>
+</head>
+<body>
+  <h1>Array Methods Examples</h1>
+
+  <h2>forEach:</h2>
+  <p>Open the console to see the names:</p>
+  <script>
+    const names = ["Alice", "Bob", "Charlie", "David"];
+    names.forEach(function(name) {
+      console.log(name);
+    });
+  </script>
+
+  <h2>map:</h2>
+  <p>Open the console to see the modified departments:</p>
+  <script>
+    const departments = ["IT Department", "ECE Department", "Mechanical Department"];
+    const modifiedDepartments = departments.map(function(department) {
+      return department + " - Saveetha";
+    });
+    console.log(modifiedDepartments);
+  </script>
+
+  <h2>filter:</h2>
+  <p>Open the console to see the list of adults:</p>
+  <script>
+    let age1 = [25, 16, 32, 19, 14, 22];
+    const adults = age1.filter(function(age) {
+      return age > 18;
+    });
+    console.log(adults);
+  </script>
+
+  <h2>reduce:</h2>
+  <p>Open the console to see the sum and average:</p>
+  <script>
+    const numbers = [10, 20, 30, 40, 50];
+    const sum = numbers.reduce(function(accumulator, current) {
+      return accumulator + current;
+    }, 0);
+    const average = sum / numbers.length;
+    console.log("Sum:", sum);
+    console.log("Average:", average);
+  </script>
+
+  <h2>every:</h2>
+  <p>Open the console to see if all ages are greater than 18:</p>
+  <script>
+    let age2 = [25, 30, 22, 19, 20, 28];
+    const allAdults = age2.every(function(age) {
+      return age > 18;
+    });
+    console.log("Are all adults?", allAdults);
+  </script>
+
+  <h2>some:</h2>
+  <p>Open the console to see if at least one person is an adult:</p>
+  <script>
+    let age3 = [15, 22, 30, 12, 19];
+    const hasAdult = age3.some(function(age) {
+      return age > 18;
+    });
+    console.log("Is there at least one adult?", hasAdult);
+  </script>
+</body>
+</html>
